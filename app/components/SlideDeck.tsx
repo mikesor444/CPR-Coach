@@ -13,24 +13,28 @@ export const SlideDeck: React.FC = () => {
 
   return (
     <div className="flex min-h-screen flex-col bg-gradient-to-b from-slate-50 via-white to-slate-100">
-      <div className="flex flex-1">
-        <main className="relative w-full lg:w-[calc(100%-20rem)]">
-          <div className="mx-auto max-w-4xl px-4 py-8 lg:px-10">
-            <AnimatePresence mode="wait">
-              <motion.div
-                key={currentNodeId}
-                initial={{ opacity: 0, x: 30 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -30 }}
-                transition={{ duration: 0.3, ease: "easeOut" }}
-              >
-                <FlowNodeView node={node} />
-              </motion.div>
-            </AnimatePresence>
+      <div className="flex-1">
+        <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-6 lg:flex-row lg:items-start lg:px-6">
+          <main className="relative w-full lg:max-w-3xl xl:max-w-4xl">
+            <div className="w-full">
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={currentNodeId}
+                  initial={{ opacity: 0, x: 16 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  exit={{ opacity: 0, x: -16 }}
+                  transition={{ duration: 0.25, ease: "easeOut" }}
+                >
+                  <FlowNodeView node={node} />
+                </motion.div>
+              </AnimatePresence>
+            </div>
+            <MobileNav />
+          </main>
+          <div className="w-full lg:w-72 xl:w-80">
+            <TOCSidebar />
           </div>
-          <MobileNav />
-        </main>
-        <TOCSidebar />
+        </div>
       </div>
     </div>
   );

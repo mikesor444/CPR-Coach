@@ -19,7 +19,7 @@ export const TOCSidebar: React.FC = () => {
           <li key={node.id}>
             <button
               onClick={() => setCurrentNodeId(node.id)}
-              className={`w-full rounded-md px-3 py-2 text-left text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 ${
+              className={`w-full rounded-lg px-3 py-2 text-left text-sm font-semibold transition focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 ${
                 active ? "bg-emerald-100 text-emerald-700" : "bg-white hover:bg-slate-100 text-slate-800"
               }`}
               aria-current={active ? "page" : undefined}
@@ -34,7 +34,7 @@ export const TOCSidebar: React.FC = () => {
 
   return (
     <>
-      <div className="hidden lg:block w-80 shrink-0 border-l border-slate-200 bg-slate-50 p-4">
+      <div className="hidden lg:block w-full max-w-[18rem] shrink-0 rounded-2xl border border-slate-200 bg-slate-50 p-4 shadow-sm">
         <div className="mb-4">
           <p className="text-xs font-semibold uppercase tracking-wide text-slate-600">Progreso</p>
           <div className="mt-1 h-2 w-full rounded-full bg-slate-200">

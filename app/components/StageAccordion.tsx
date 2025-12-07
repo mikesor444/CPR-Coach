@@ -34,9 +34,9 @@ export const StageAccordion: React.FC<Props> = ({ accordion }) => {
         const isOpen = openId === item.id;
         const isDone = completed.has(item.id);
         return (
-          <div key={item.id} className="rounded-lg border border-slate-200 bg-white shadow-sm">
+          <div key={item.id} className="rounded-xl border border-slate-200 bg-white shadow-sm">
             <button
-              className="flex w-full items-center justify-between px-4 py-3 text-left font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+              className="flex w-full items-center justify-between px-4 py-3 text-left text-base font-semibold focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
               onClick={() => handleToggle(item)}
               aria-expanded={isOpen}
             >
@@ -55,7 +55,7 @@ export const StageAccordion: React.FC<Props> = ({ accordion }) => {
                   transition={{ duration: 0.25 }}
                   className="overflow-hidden"
                 >
-                  <div className="px-4 pb-4 text-slate-700">{item.content}</div>
+                  <div className="px-4 pb-4 text-sm leading-relaxed text-slate-700">{item.content}</div>
                 </motion.div>
               )}
             </AnimatePresence>

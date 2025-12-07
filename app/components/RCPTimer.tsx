@@ -110,7 +110,7 @@ const RCPTimer: React.FC = () => {
   };
 
   const neonCard = (
-    <div className="relative mx-auto max-w-3xl rounded-3xl border border-emerald-500/40 bg-black px-6 py-8 text-center text-white shadow-[0_0_30px_rgba(16,185,129,0.25)]">
+    <div className="relative mx-auto w-full max-w-3xl rounded-3xl border border-emerald-500/40 bg-black px-5 py-7 text-center text-white shadow-[0_0_30px_rgba(16,185,129,0.25)] sm:px-6 sm:py-8">
       <p className="mb-2 text-xs text-emerald-300">Modo RCP educativo</p>
       <h2 className="text-3xl font-black tracking-tight text-emerald-200">INICIA COMPRESIONES</h2>
       <p className="text-sm uppercase text-sky-300">Ritmo recomendado 100 comp/min</p>
@@ -189,14 +189,14 @@ const RCPTimer: React.FC = () => {
           {phase === "pulse-check" ? (
             <button
               onClick={() => handleReturnOfCirculation("Pulso encontrado en chequeo")}
-              className="rounded-lg border border-emerald-400 bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+              className="rounded-xl border border-emerald-400 bg-emerald-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
             >
               He encontrado pulso
             </button>
           ) : (
             <button
               onClick={() => handleReturnOfCirculation("La persona se mueve o respira mejor")}
-              className="rounded-lg border border-emerald-400 bg-emerald-600 px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+              className="rounded-xl border border-emerald-400 bg-emerald-600 px-4 py-3 text-sm font-semibold text-white shadow-lg shadow-emerald-500/30 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
             >
               La persona se mueve o vuelve a respirar
             </button>
@@ -209,7 +209,7 @@ const RCPTimer: React.FC = () => {
                 setBeat(1);
                 setPhase("compressions");
               }}
-              className="rounded-lg border border-slate-500 bg-slate-800 px-4 py-2 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
+              className="rounded-xl border border-slate-500 bg-slate-800 px-4 py-3 text-sm font-semibold text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500"
             >
               No hay pulso, seguir RCP
             </button>
